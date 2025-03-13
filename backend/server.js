@@ -18,7 +18,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "http://moviewatchtracker.s3-website-us-east-1.amazonaws.com",
+      "http://moviewatchtracker1.s3-website-us-east-1.amazonaws.com",
     ],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
