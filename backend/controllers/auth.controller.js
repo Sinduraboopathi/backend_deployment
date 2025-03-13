@@ -94,7 +94,7 @@ export const forgotPassword = async (req, res) => {
     const expires = new Date(Date.now() + 3600000);
     await ResetToken.destroy({ where: { email } });
     await ResetToken.create({ token, email, expires });
-    const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/reset-password/${token}`;
+    const resetLink = `${process.env.FRONTEND_URL || 'http://moviewatchtracker2.s3-website-us-east-1.amazonaws.com'}/reset-password/${token}`;
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
